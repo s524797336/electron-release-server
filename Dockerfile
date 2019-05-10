@@ -23,4 +23,4 @@ COPY config/docker.js config/local.js
 
 EXPOSE 80
 
-CMD [ "npm", "start" ]
+CMD [ "./scripts/wait.sh", "db:5432", "--", "npm", "start" ]
