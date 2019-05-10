@@ -4,7 +4,7 @@ const http = require('http')
 const querystring = require('querystring')
 const url = require('url')
 
-const packageLockFile = path.resolve(__dirname, '../../package-lock.json')
+const packageLockFile = path.resolve(__dirname, './package-lock.json')
 const file = fs.readFileSync(packageLockFile)
 
 const postData = querystring.stringify({
