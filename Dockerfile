@@ -13,7 +13,7 @@ RUN NPM_PROXY_HOST=${NPM_REGISTRY} node /usr/src/electron-release-server/checkDe
 RUN npm install --registry=${NPM_REGISTRY} --proxy=${NPM_REGISTRY} --https-proxy=${NPM_REGISTRY} --strict-ssl=false --ignore-scripts --no-audit
 RUN npm rebuild \
   && ./node_modules/.bin/bower install --allow-root \
-  && npm cache clean
+  && npm cache clean -f
 RUN rm -rf /usr/src/electron-release-server/checkDeps.js
 
 # Bundle app source
