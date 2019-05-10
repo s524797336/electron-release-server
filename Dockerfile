@@ -1,7 +1,7 @@
 FROM node:alpine
 ARG NPM_REGISTRY=http://127.0.0.1:5399
 RUN apk update && apk upgrade && \
-    apk add --no-cache bash git openssh python python-dev py-pip build-essential
+    apk add --no-cache bash git openssh python python-dev py-pip make
 
 # Create app directory
 RUN mkdir -p /usr/src/electron-release-server
