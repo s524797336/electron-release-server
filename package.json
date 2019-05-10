@@ -36,6 +36,7 @@
     "rc": "~1.2.8",
     "sails": "^1.2.1",
     "sails-disk": "^1.1.2",
+    "sails-hook-grunt": "^3.1.0",
     "sails-pg-session": "^1.0.1",
     "sails-postgresql": "^1.0.2",
     "semver": "^6.0.0",

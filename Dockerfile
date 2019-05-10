@@ -16,11 +16,11 @@ RUN npm rebuild \
   && npm cache clean -f
 RUN rm -rf /usr/src/electron-release-server/checkDeps.js
 
+EXPOSE 80
+
+CMD [ "./scripts/wait.sh", "db:5432", "--", "npm", "start" ]
+
 # Bundle app source
 COPY . /usr/src/electron-release-server
 
 COPY config/docker.js config/local.js
-
-EXPOSE 80
-
-CMD [ "./scripts/wait.sh", "db:5432", "--", "npm", "start" ]
